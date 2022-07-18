@@ -1,17 +1,17 @@
-# Storing user passwords in clear text? 
+# Storing user passwords in clear text? WHY!?! - Hashing passwords with Python using SHA-2
 
 Keeping your passwords secure is important. Even more if you
 are storing passwords for others. I'm going to show you a simple way to hash a password using Python.
-
-### TLDR
-Code is at the end. Get down to nitty gritty
 
 ### Requirements
 - Python 3. 
 - Passlib 
   - https://passlib.readthedocs.io/en/stable/
 
-### Let's code!
+### TLDR
+![alt text](https://github.com/applericky/hasher/blob/main/images/codeisnittygritty.jpeg?raw=true)
+
+## Let's code!
 
 I'm going to write out some code and explain what is happening.
 I'll start off by importing our two libraries Passlib and Getpass.
@@ -39,7 +39,7 @@ include the hash method.
 9 |     database_create(username, hashed_password)
 ```
 
-Now what did we do?
+What just happened?
 
 Line 5: we defined our function and we named it ```account_creation()```
 
@@ -84,6 +84,34 @@ Finally we add our main method. This makes us 10x developers!
 
 And that's it! 
 
+![alt text](https://github.com/applericky/hasher/blob/main/images/what%3F.jpeg?raw=true)
+
+Yep, it is that easy!
+
+Let's test the code.
+```shell
+➜ python3 main.py
+Please enter a username: elmo
+Please enter a password:
+Account created.
+````
+I entered the username ```elmo``` and the password ```elmoloveshisgoldfishandcrayon123```.
+
+Now we check to see if the file was created using ls.
+
+
+```shell
+➜ ls 
+elmo.txt main.py
+````
+As you can see there is a file named ```elmo```. I'll cat the file to check the contents.
+
+```shell
+cat elmo.txt
+$6$rounds=200000$gYlAWMks4mttsMxS$xDjy0WP5d/zTL0hF/Y.ATqv1J5Yrji4pyerh6znnie01qKdMmAXrzqg7FV.9XtKHiGN/5p3aHsglCg2mA3kVY0%
+```
+
+Whoa. Check out that long hashed password!
 
 # The Code
 
