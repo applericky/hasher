@@ -1,7 +1,22 @@
-# Storing user passwords in clear text? WHY!?! - Hashing passwords with Python using SHA-2
+# Storing user passwords in plain text?
 
-Keeping your passwords secure is important. Even more if you
-are storing passwords for others. I'm going to show you a simple way to hash a password using Python.
+Keeping your passwords secure is important. Even more if you are storing passwords for others. You won't believe how
+many companies out there have stored user information in plain text. Let me point you to some articles and see if you remember
+any of these.
+
+
+[Krebs on Security - Facebook Stored Hundreds of Millions of User Passwords in Plain Text for Years
+](https://krebsonsecurity.com/2019/03/facebook-stored-hundreds-of-millions-of-user-passwords-in-plain-text-for-years/)
+
+[RockYou2021 - largest password compilation of all time leaked online with 8.4 billion entries
+](https://cybernews.com/security/rockyou2021-alltime-largest-password-compilation-leaked/)
+
+[SolarWinds hack: the mystery of one of the biggest cyberattacks ever
+](https://cybernews.com/security/solarwinds-hack-the-mystery-of-one-of-the-biggest-cyberattacks-ever/)
+
+I think believe when a new app or website is created, security should be one of the first things that needs
+to be implemented. I'm going to show you a simple way of hashing passwords using Python. We will use SHA-2(512) to create
+a long string out of the password. 
 
 ### Requirements
 - Python 3. 
@@ -88,7 +103,7 @@ And that's it!
 
 Yep, it is that easy!
 
-Let's test the code.
+Let's test the code in our terminal
 ```shell
 ➜ python3 main.py
 Please enter a username: elmo
@@ -104,7 +119,7 @@ Now we check to see if the file was created using ls.
 ➜ ls 
 elmo.txt main.py
 ````
-As you can see there is a file named ```elmo```. I'll cat the file to check the contents.
+As you can see there is a file named ```elmo.txt```. I'll cat the file to check the contents.
 
 ```shell
 cat elmo.txt
@@ -112,6 +127,13 @@ $6$rounds=200000$gYlAWMks4mttsMxS$xDjy0WP5d/zTL0hF/Y.ATqv1J5Yrji4pyerh6znnie01qK
 ```
 
 Whoa. Check out that long hashed password!
+
+Want to learn more about SHA-2?
+
+https://en.wikipedia.org/wiki/SHA-2
+
+
+
 
 # The Code
 
