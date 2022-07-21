@@ -1,7 +1,7 @@
 # Storing user passwords in plain text?
 
 Keeping your passwords secure is important. Even more if you are storing passwords for others. You won't believe how
-many companies out there have stored user information in plain text. Let me point you to some articles and see if you remember
+many companies out there have stored user information in plain text. I'll point you to some articles and see if you remember
 any of these.
 
 
@@ -14,7 +14,7 @@ any of these.
 [SolarWinds hack: the mystery of one of the biggest cyberattacks ever
 ](https://cybernews.com/security/solarwinds-hack-the-mystery-of-one-of-the-biggest-cyberattacks-ever/)
 
-I think believe when a new app or website is created, security should be one of the first things that needs
+I believe when a new app or website is created, security should be one of the first things that needs
 to be implemented. I'm going to show you a simple way of hashing passwords using Python. We will use SHA-2(512) to create
 a long string out of the password. 
 
